@@ -26,11 +26,18 @@ const u = new MessageButton()
 .setStyle(`url`)
 .setLabel(`Download Avatar`)
 .setURL(`${user.displayAvatarURL({
- size: 2048,
  dynamic: true,
 })}`)
+const png = new MessageButton()
+.setStyle(`url`)
+.setLabel(`png`)
+.setURL(`{Member.user.displayAvatarURL({
+ format: "png",
+ dynamic: true,
+})}`)
+
 const row = new MessageActionRow()
-.addComponent([u])
+.addComponent([u , png])
 message.channel.send({components: [row], embed: embed})
 
    }
