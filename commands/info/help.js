@@ -25,7 +25,7 @@ module.exports = {
 
     const support = new MessageButton()
     .setStyle('url')
-    .setURL('https://discord.gg/G6vM9jb5')
+    .setURL('https://discord.gg/Hjwu3Uf4mn')
     .setLabel('Support Server')
 
 const button = new MessageButton()
