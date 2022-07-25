@@ -1,4 +1,5 @@
 dependencies:
+  axios: 0.24.0
   discord-button-pages: 1.1.9
   discord-buttons: 4.0.0
   discord-embeds-pages-buttons: 1.3.0
@@ -123,6 +124,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==
+  /axios/0.24.0:
+    dependencies:
+      follow-redirects: 1.15.1
+    dev: false
+    resolution:
+      integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
   /base64-js/1.3.1:
     dev: false
     resolution:
@@ -526,6 +533,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-aAWcW57uxVNrQZqFXjITpW3sIUQmHGG3qSb9mUah9MgMC4NeWhNOlNjXEYq3HjRAvL6arUviZGGJsBg6z0zsWA==
+  /follow-redirects/1.15.1:
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==
   /foreach/2.0.5:
     dev: false
     resolution:
@@ -1581,6 +1594,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  axios: ^0.24.0
   discord-button-pages: ^1.1.9
   discord-buttons: ^4.0.0
   discord-embeds-pages-buttons: ^1.3.0

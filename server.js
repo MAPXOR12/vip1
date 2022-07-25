@@ -24,7 +24,7 @@ const Discord = require("discord.js");
 	}
 	});
 	
-	let modules = [ "info", "moderation", "fun"];
+	let modules = [ "info", "moderation", "fun", "gif"];
 	
 	modules.forEach(function(module) {
 	fs.readdir(`./commands/${module}`, function(err, files) {
