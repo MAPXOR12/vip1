@@ -1,7 +1,6 @@
 const superagent = require("snekfetch");
 const Discord = require('discord.js')
-const lineReplyNoMention = require('discord-reply');
-const color = (../config.js);
+const { Color } = require("../../config.js");
 module.exports = {
   name: "dog",
   permissions: ["SEND_MESSAGES"],
