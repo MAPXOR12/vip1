@@ -26,13 +26,7 @@ const u = new MessageButton()
 .setStyle(`url`)
 .setLabel(`Download Avatar`)
 .setURL(`${user.displayAvatarURL({
- dynamic: true,
-})}`)
-const png = new MessageButton()
-.setStyle(`url`)
-.setLabel(`png`)
-.setURL(`{Member.user.displayAvatarURL({
- format: "png",
+  size: "2048",
  dynamic: true,
 })}`)
 
