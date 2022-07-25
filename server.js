@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
+const disbut = require('discord-buttons')
+const { MessageMenuOption, MessageMenu } = require("discord-buttons");
 const client = new Discord.Client();
 const { Prefix, Token, Color } = require("./config.js");
 client.commands = new Discord.Collection();
