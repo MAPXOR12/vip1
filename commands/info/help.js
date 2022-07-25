@@ -23,8 +23,25 @@ module.exports = {
     
 
 
-    if (!args.length) return message.channel.send(embed);
+    const support = new MessageButton()
+    .setStyle('url')
+    .setURL('https://discord.gg/bwfsd4qfkn')
+    .setLabel('Support Server')
 
+const button = new MessageButton()
+    .setStyle('url')
+    .setURL('https://discord.com/api/oauth2/authorize?client_id=800442243697213442&permissions=8&scope=bot')
+    .setLabel('Invite Me')
+ 
+ 
+let row = new MessageActionRow();
+row.addComponent(button);
+row.addComponent(support);
+
+if (!args.length) return message.channel.send({
+  embed: embed,
+  component: row
+})
 
     let cmd =
       client.commands.get(args[0].toLowerCase()) ||
