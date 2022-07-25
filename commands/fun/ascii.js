@@ -13,7 +13,6 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
 
-    message.replay();
     
     let Content = args.join(" ");
 
