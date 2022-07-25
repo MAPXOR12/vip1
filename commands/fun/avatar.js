@@ -26,7 +26,7 @@ const u = new MessageButton()
 .setStyle(`url`)
 .setLabel(`Download Avatar`)
 .setURL(`${user.displayAvatarURL({
- size: 2048,
+ size: 1000,
  dynamic: true,
 })}`)
 const row = new MessageActionRow()
