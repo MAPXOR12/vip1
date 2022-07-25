@@ -1,40 +1,38 @@
-const Discord = require("discord.js");
-const { MessageEmbed } = require("discord.js");
+
+
+
+
+const Discord = require('discord.js')
+const { MessageButton , MessageActionRow } = require(`discord-buttons`)
 const { Color } = require("../../config.js");
 
 module.exports = {
   name: "avatar",
-  aliases: ["icon", "pfp"],
-  description: "Show Member Avatar!",
-  usage: "Avatar | <Mention Member>",
+  aliases: ["av"],
+  description: "show user/your avatar.",
+  usage: "avatar @user/your",
   run: async (client, message, args) => {
-    //Start
-    message.replay();
-    let Member =
-      message.mentions.members.first() ||
-      message.guild.members.cache.get(args[0]) ||
-      message.member;
 
-    let embed = new Discord.MessageEmbed()
-      .setColor(Color)
-      .addField(
-        "Links",
-        `[png](${Member.user.displayAvatarURL({
-          format: "png",
-          dynamic: true
-        })}) | [jpg](${Member.user.displayAvatarURL({
-          format: "jpg",
-          dynamic: true
-        })}) | [webp](${Member.user.displayAvatarURL({
-          format: "webp",
-          dynamic: true
-        })})`
-      )
-      .setImage(Member.user.displayAvatarURL({ dynamic: true }))
-      .setTimestamp();
+ 
+  const user = message.mentions.users.first()|| client.users.cache.get(message.content.split(' ')[1]) || message.author;
 
-    message.channel.send(embed);
+const embed = new Discord.MessageEmbed()
+    .setColor(Color)
+    .setAuthor(user.username , user.avatarURL())
+    .setImage(user.avatarURL({dynamic : true, size : 1024}))
 
-    //End
-  }
-};
+
+const u = new MessageButton()
+.setStyle(`url`)
+.setLabel(`Download Avatar`)
+.setURL(`${user.displayAvatarURL({
+ size: 2048,
+ dynamic: true,
+})}`)
+const row = new MessageActionRow()
+.addComponent([u])
+message.channel.send({components: [row], embed: embed})
+
+   }
+}
+
