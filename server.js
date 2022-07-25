@@ -10,7 +10,14 @@ const Discord = require("discord.js");
 	client.aliases = new Discord.Collection();
   client.slash = new Discord.Collection();
 	client.db = require("quick.db");
-	
+
+
+        client.on("ready", async () => {
+	console.log(`Yo boii!! Moderation.V1 has been deployed!! Coded by 365 ɢᴀᴍɪɴɢ ɴ ᴍᴏʀᴇ_2.0#6766`);
+	client.user
+	.setActivity(`-help  | @Could Bot `, { type: "WATCHING" })
+	.catch(error => console.log(error));
+	});	
 
 	client.on("message", async message => {
 	if (message.channel.type === "dm") return;
