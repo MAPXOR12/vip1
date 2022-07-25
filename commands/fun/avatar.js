@@ -9,7 +9,7 @@ module.exports = {
   usage: "Avatar | <Mention Member>",
   run: async (client, message, args) => {
     //Start
-    message.delete();
+    message.replay();
     let Member =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]) ||
