@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
     name: 'poker',
-    aliases: [],
+    aliases: ["po"],
     
     async execute(client, message) {
         if (!message.member.voice.channel) return message.channel.send(new MessageEmbed().setColor('RED').setDescription(`You must be a voice channel before using this command.`).setTimestamp());
