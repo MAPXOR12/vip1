@@ -4,7 +4,7 @@ const db = require("quick.db");
 
 module.exports = {
   name: "sreply",
-  category: "suggestion",
+  category: "cmd",
   run: async (client, message, args) => {
     
 let channel = await db.fetch(`suggestion_${message.guild.id}`);
