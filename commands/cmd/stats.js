@@ -6,7 +6,7 @@ category: "owner",
 aliases: ["detail"],
 run: async (client, message, args, level) => {
 //command
-  if(message.author.id != 852219497763045398){
+  if(message.author.id != 743887896481628190){
     const noperms = new MessageEmbed()
     .setDescription("<:astroz_wrong:825598313499459605> This Command Only Use By My Owner **NPG** ")
     .setColor("YELLOW");
