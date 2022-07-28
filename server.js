@@ -11,7 +11,10 @@ const Discord = require("discord.js");
 	const { Prefix, Token, Color } = require("./config.js");
 	client.commands = new Discord.Collection();
 	client.aliases = new Discord.Collection();
-  
+        client.db = require("quick.db");
+
+
+
 client.queue = new Map();
 client.vote = new Map();
 client.db = require("quick.db");
