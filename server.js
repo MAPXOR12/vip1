@@ -14,11 +14,7 @@ const Discord = require("discord.js");
   
 client.queue = new Map();
 client.vote = new Map();
-const { ready } = require("./handlers/ready.js")
-
-
-	client.db = require("quick.db");
-
+client.db = require("quick.db");
 client.queue = new Map()
 process.on('unhandledRejection', console.error);
 
