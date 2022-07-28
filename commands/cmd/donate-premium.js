@@ -1,7 +1,3 @@
-38 lines (38 sloc)  2.21 KB
-Raw Blame
-
-
 const premiumSchema = require("../../models/premium");
 const lineReplyNoMention = require('discord-reply');
 const color = ("../config.js");
