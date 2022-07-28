@@ -31,7 +31,7 @@ const Discord = require("discord.js");
 	}
 	});
 	
-	let modules = [ "info", "moderation", "fun", "cmd", "music", "gif" ];
+	let modules = [ "info", "moderation", "fun", "cmd", "music", "gifs" ];
 	
 	modules.forEach(function(module) {
 	fs.readdir(`./commands/${module}`, function(err, files) {
