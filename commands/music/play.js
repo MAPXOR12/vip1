@@ -1,40 +1,19 @@
-const { MessageEmbed } = require("discord.js");
-const ytsr = require('ytsr');
+(13 sloc)  1.06 KB
+Raw Blame
+
+
+const { MessageEmbed } = require('discord.js');
+const getAttachmentURL = (msg) => (msg.attachments.first() || {}).url;
+
 module.exports = {
-    name: 'play',
-    aliases: ['p'], // Optional
-    category: 'music',
-    description: 'Play a song in the vc', 
-    run: async (client, message, args) => {
-        const voice_channel = message.member.voice.channel;
-        const embed = new MessageEmbed()
-            .setColor('#FF5757')
-            .setDescription(`You need to be in a vc to execute this command!`)
-        if (!voice_channel) return message.channel.send(embed);
+	name: 'play',
+	aliases: ['p'],
 
-        if(client.player.isPlaying(message)) {
-            let song = await client.player.addToQueue(message, args.join(' '));
-
-            const added = new MessageEmbed()
-            .setColor('#85b0d2')
-            .setDescription(`Added **${song.name}** to the queue`)
-
-
-            // If there were no errors the Player#songAdd event will fire and the song will not be null.
-            if(song)
-                message.channel.send(added);
-            return;
-        } else {
-            let song = await client.player.play(message, args.join(' '));
-
-            const started = new MessageEmbed()
-            .setColor('#85b0d2')
-            .setDescription(`Started playing **${song.name}**`)
-
-            // If there were no errors the Player#songAdd event will fire and the song will not be null.
-            if(song)
-                message.channel.send(started);
-            return;
-        }
-    }
+	async execute (client, message, args) {
+		if (!message.member.voice.channel) return message.channel.send(new MessageEmbed().setColor('RED').setDescription(`You must be a voice channel before using this command.`).setTimestamp());
+		if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(new MessageEmbed().setColor('RED').setDescription(`You are not in same voice channel.`).setTimestamp());
+		let query = args.join(' ') || getAttachmentURL(message);
+		if (!query) return message.channel.send(new MessageEmbed().setColor('RED').setDescription(`Please specify a song query to play.`).setTimestamp())
+		try { await client.distube.play(message, query); } catch (e) { return message.channel.send(new MessageEmbed().setColor('RED').setDescription(`An error occurred while processing the command.`).setTimestamp()) };
+	}
 }
