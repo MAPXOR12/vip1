@@ -7,7 +7,6 @@ const Discord = require("discord.js");
 	disbut(client)
 	const { MessageMenuOption, MessageMenu } = require("discord-buttons");
 	const config = require("./config.js");
-        const yts = require('yt-search')
 	const { Prefix, Token, Color } = require("./config.js");
 	client.commands = new Discord.Collection();
 	client.aliases = new Discord.Collection();
