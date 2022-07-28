@@ -1,6 +1,6 @@
 const premiumSchema = require("../../models/premium");
 const lineReplyNoMention = require('discord-reply');
-const color = ("../config.js");
+const { Color } = require("../../config.js");
 const OWNER_ID = "743887896481628190"
 module.exports = {
     name: 'donate-premium',
