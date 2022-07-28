@@ -1,5 +1,6 @@
 const Discord = require("discord.js");	
 	const fs = require("fs");
+        const ytsr = require('ytsr');
         const backup = require('discord-backup');
 	const client = new Discord.Client();
 	const disbut = require('discord-buttons')
