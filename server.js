@@ -33,7 +33,7 @@ const Discord = require("discord.js");
 	}
 	});
 	
-	let modules = [ "info", "moderation", "fun", "cmd" ];
+	let modules = [ "info", "moderation", "fun", "cmd", "music" ];
 	
 	modules.forEach(function(module) {
 	fs.readdir(`./commands/${module}`, function(err, files) {
