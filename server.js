@@ -4,6 +4,7 @@ const Discord = require("discord.js");
         const backup = require('discord-backup');
 	const client = new Discord.Client();
 	const disbut = require('discord-buttons')
+        disbut(client)
 	const { MessageMenuOption, MessageMenu } = require("discord-buttons");
 	const config = require("./config.js");
 	const { Prefix, Token, Color } = require("./config.js");
