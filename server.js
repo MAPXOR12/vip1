@@ -11,9 +11,6 @@ const Discord = require("discord.js");
 	const { Prefix, Token, Color } = require("./config.js");
 	client.commands = new Discord.Collection();
 	client.aliases = new Discord.Collection();
-        client.db = require("quick.db");
-
-
 
         client.on("ready", async () => {
 	console.log(`Yo boii!! Moderation.V1 has been deployed!! Coded by 365 ɢᴀᴍɪɴɢ ɴ ᴍᴏʀᴇ_2.0#6766`);
