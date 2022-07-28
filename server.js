@@ -7,10 +7,16 @@ const Discord = require("discord.js");
 	disbut(client)
 	const { MessageMenuOption, MessageMenu } = require("discord-buttons");
 	const config = require("./config.js");
+        const yts = require('yt-search')
 	const { Prefix, Token, Color } = require("./config.js");
 	client.commands = new Discord.Collection();
 	client.aliases = new Discord.Collection();
-  client.slash = new Discord.Collection();
+  
+client.queue = new Map();
+client.vote = new Map();
+const { ready } = require("./handlers/ready.js")
+
+
 	client.db = require("quick.db");
 
 client.queue = new Map()
