@@ -15,12 +15,6 @@ const Discord = require("discord.js");
 
 
 
-client.queue = new Map();
-client.vote = new Map();
-client.db = require("quick.db");
-client.queue = new Map()
-process.on('unhandledRejection', console.error);
-
         client.on("ready", async () => {
 	console.log(`Yo boii!! Moderation.V1 has been deployed!! Coded by 365 ɢᴀᴍɪɴɢ ɴ ᴍᴏʀᴇ_2.0#6766`);
 	client.user
