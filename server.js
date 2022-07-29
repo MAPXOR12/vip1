@@ -15,7 +15,7 @@ const Discord = require("discord.js");
         client.on("ready", async () => {
 	console.log(`Yo boii!! Moderation.V1 has been deployed!! Coded by 365 ɢᴀᴍɪɴɢ ɴ ᴍᴏʀᴇ_2.0#6766`);
 	client.user
-	.setActivity(`-help  | @Could Bot `, { type: "WATCHING" })
+	.setActivity(`-help  | @Bright Bot `, { type: "WATCHING" })
 	.catch(error => console.log(error));
 	});	
 
