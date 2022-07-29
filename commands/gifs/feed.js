@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 const disbut = require('discord-buttons');
 const { MessageActionRow, MessageButton } = require("discord-buttons");
 const roasts = require('../../JSON/roast.json');
-const { prefix, developerID } = require("../../config.json")
+const { prefix } = require("../../config.json")
 
 module.exports = {
   name: "feed",
