@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 const OWNER_ID = "743887896481628190";
 const errorChannel = "996754026727227534";
 const lineReplyNoMention = require('discord-reply');
-const color = process.env.Color;
+const { Color } = require("../../config.js");
+
 require('dotenv').config();
 module.exports = {
     name: "leaveservers",
