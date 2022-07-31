@@ -15,7 +15,7 @@ module.exports = {
     let embed = new MessageEmbed()
     .setColor(Color)
     .setTitle(`${client.user.username} Commands!`)
-    .setDescription(`Use ${Prefix}Help <Command Name> For More Command Information!` + 
+    .setDescription(`Use ${Prefix}Help <Command Name> For More Command Information!
     **Fun**
 Avatar, Coinflip, Howgay, Meme, Rate, 8ball, Dicksize, Ascii, Choose, Hack, Randomnumber
 **Moderation**
