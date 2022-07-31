@@ -1,5 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const SnakeGame = require("snakecord");
+const snakegame = require("snakecord");
 
 module.exports = {
   name: "snack",
