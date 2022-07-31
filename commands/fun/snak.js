@@ -7,11 +7,7 @@ module.exports = {
   description: "Play Snack Game on Discord",
   usage: "",
   category : "games",
-  /**
-   * @param {Client} client
-   * @param {Message} message
-   * @param {String[]} args
-   */
+  
   run: async (client, message, args) => {
     const snakeGame = new SnakeGame({
       title: "Snake Game",
