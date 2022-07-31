@@ -24,6 +24,7 @@
     "node-superfetch": "^0.2.3",
     "mongoose": "^5.13.14",
     "figlet": "^1.5.0",
+    "snakecord": "^1.0.9",
     "util": "^0.12.3",
     "novelcovid": "^3.0.0",
     "quick.db": "^7.1.1",
