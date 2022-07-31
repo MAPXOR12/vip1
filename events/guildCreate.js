@@ -8,7 +8,10 @@ const { Client, Guild, MessageEmbed } = require("discord.js")
 
 
 module.exports = (client, guild) => {
- 
+
+ if (guild.memberCount < 100) {
+	return guild.leave()
+       }
  let channel = client.channels.cache.get("996753921596981279");
  const joinEmbed = new MessageEmbed()
        .setColor("#303136")
