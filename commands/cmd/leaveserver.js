@@ -13,7 +13,7 @@ module.exports = {
     description: "Check what Servers the bot is in!",
     async execute(client, message, cmd, args, Discord) {
         try {
-            if (message.author.id != OWNER_ID) {
+            if (message.author.id != ownerid) {
                 const nopr = new Discord.MessageEmbed().setTimestamp().setColor(`${color}`).setAuthor(`${message.author.username}`, message.author.displayAvatarURL({ dynamic: true })).setDescription(`**Sorry Only 👑HACKERPROᵈᵉᵛ#1498 Can Run This Command! 😔**`)
                 return message.lineReplyNoMention({ embed: nopr })
             }
