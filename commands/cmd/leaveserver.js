@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const OWNER_ID = "743887896481628190";
+const ownerid = "743887896481628190";
 const errorChannel = "996754026727227534";
 const lineReplyNoMention = require('discord-reply');
 const { Color } = require("../../config.js");
