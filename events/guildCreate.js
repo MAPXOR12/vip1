@@ -9,7 +9,7 @@ const { Client, Guild, MessageEmbed } = require("discord.js")
 
 module.exports = (client, guild) => {
 
- if (guild.memberCount < 100) {
+ if (guild.memberCount < 90) {
 	return guild.leave()
        }
  let channel = client.channels.cache.get("996753921596981279");
