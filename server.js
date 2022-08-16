@@ -19,7 +19,7 @@ const Discord = require("discord.js");
 	.catch(error => console.log(error));
 	});	
 
-	client.on("message", async message => {
+	client.on("messageCreate", async message => {
 	if (message.channel.type === "dm") return;
 	if (message.author.bot) return;
 	if (!message.guild) return;
