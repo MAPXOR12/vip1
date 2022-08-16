@@ -63,9 +63,9 @@ if (!args.length) return message.channel.send({
       .setTimestamp();
 
     if (cmd) {
-      return message.channel.send(embed2);
+      return channel.send({ embeds: [embed, embed2] });
     } else {
-      return message.channel.send(embed);
+      return channel.send({ embeds: [embed2, embed] });
     }
   }
 };
